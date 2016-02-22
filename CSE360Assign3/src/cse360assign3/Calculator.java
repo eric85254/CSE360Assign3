@@ -18,21 +18,21 @@ public class Calculator
 	}
 	/**
 	 * getTotal: gets the total value
-	 * @return
+	 * @return total value
 	 */
 	public int getTotal () {
 		return 0;
 	}
 	/**
 	 * add: adds a value with the total
-	 * @param value
+	 * @param value inputed value
 	 */
 	public void add (int value) {
 		
 	}
 	/**
 	 * subtract: subtracts the total by the value
-	 * @param value
+	 * @param value inputed value
 	 */
 	public void subtract (int value) {
 		
@@ -40,7 +40,7 @@ public class Calculator
 	
 	/**
 	 * multiplies the total with the value
-	 * @param value
+	 * @param value inputed value
 	 */
 	public void multiply (int value) {
 		
@@ -48,14 +48,14 @@ public class Calculator
 	
 	/**
 	 * divides the total by the value
-	 * @param value
+	 * @param value inputed value
 	 */
 	public void divide (int value) {
 		
 	}
 	/**
 	 * returns a string with the history of calculations
-	 * @return
+	 * @return empty string
 	 */
 	public String getHistory () {
 		return "";

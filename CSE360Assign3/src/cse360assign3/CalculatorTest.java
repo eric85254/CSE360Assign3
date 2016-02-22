@@ -7,6 +7,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+//import cse360assign3.Calculator;
+
 /**
  * @author eric8_000
  *
@@ -18,7 +20,9 @@ public class CalculatorTest {
 	 */
 	@Test
 	public final void testCalculator() {
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		
+		assertNotNull(calc.getTotal());
 	}
 
 	/**
@@ -68,5 +72,4 @@ public class CalculatorTest {
 	public final void testGetHistory() {
 		fail("Not yet implemented");
 	}
-
 }
