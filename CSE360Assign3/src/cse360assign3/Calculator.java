@@ -58,6 +58,7 @@ public class Calculator
 			total = total / value;
 		}
 	}
+	
 	/**
 	 * returns a string with the history of calculations
 	 * @return
