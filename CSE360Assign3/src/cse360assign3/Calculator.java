@@ -18,44 +18,49 @@ public class Calculator
 	}
 	/**
 	 * getTotal: gets the total value
-	 * @return total value
+	 * @return
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	/**
 	 * add: adds a value with the total
-	 * @param value inputed value
+	 * @param value
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	/**
 	 * subtract: subtracts the total by the value
-	 * @param value inputed value
+	 * @param value
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/**
 	 * multiplies the total with the value
-	 * @param value inputed value
+	 * @param value
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/**
 	 * divides the total by the value
-	 * @param value inputed value
+	 * @param value
 	 */
 	public void divide (int value) {
-		
+		if (value == 0) {
+			total = 0;
+		}
+		else {
+			total = total / value;
+		}
 	}
 	/**
 	 * returns a string with the history of calculations
-	 * @return empty string
+	 * @return
 	 */
 	public String getHistory () {
 		return "";
