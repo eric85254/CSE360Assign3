@@ -1,5 +1,7 @@
-/**
- * 
+/** 
+ * @author Eric Gottfried
+ *@version Feb 22 2016
+ * PIN: 325
  */
 package cse360assign3;
 
@@ -92,6 +94,19 @@ public class CalculatorTest {
 		assertEquals(1,calc.getTotal());
 	}
 	
+	@Test
+	public final void testTotalForAll() {
+		
+		Calculator calc = new Calculator();
+		
+		calc.add(5);
+		calc.subtract(1);
+		calc.multiply(2);
+		calc.divide(2);
+		
+		assertEquals(4,calc.getTotal());
+	}
+	
 	/** Tests dividing
 	 * Test method for {@link cse360assign3.Calculator#divide(int)}.
 	 */
@@ -105,7 +120,8 @@ public class CalculatorTest {
 		
 		assertEquals(0,calc.getTotal());
 	}
-	/** Tests String
+	
+	/** Tests String of history of calculations
 	 * Test method for {@link cse360assign3.Calculator#getHistory()}.
 	 */
 	@Test
@@ -113,6 +129,24 @@ public class CalculatorTest {
 	
 		Calculator calc = new Calculator();
 		
-		assertEquals("",calc.getHistory());
+		calc.add(5);
+		
+		assertEquals("0 + 5",calc.getHistory());
+	}
+	
+	/** Tests String
+	 * Test method for {@link cse360assign3.Calculator#getHistory()}.
+	 */
+	@Test
+	public final void testGetHistoryAll() {
+	
+		Calculator calc = new Calculator();
+		
+		calc.add(5);
+		calc.subtract(1);
+		calc.multiply(2);
+		calc.divide(2);
+		
+		assertEquals("0 + 5 - 1 * 2 / 2",calc.getHistory());
 	}
 }

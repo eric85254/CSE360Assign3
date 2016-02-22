@@ -4,7 +4,7 @@ package cse360assign3;
  * A calculator that can add, subtract, multiply, divide
  * and get the history of the calculations you performed
  * 
- * @author eric8_000
+ * @author Eric Gottfried
  *@version Feb 22 2016
  * PIN: 325
  */
@@ -12,6 +12,7 @@ public class Calculator
 {
 
 	private int total;
+	private String historyList = "0";
 	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
@@ -29,6 +30,8 @@ public class Calculator
 	 */
 	public void add (int value) {
 		total = total + value;
+		
+		historyList = historyList + " + " + value;
 	}
 	/**
 	 * subtract: subtracts the total by the value
@@ -36,6 +39,8 @@ public class Calculator
 	 */
 	public void subtract (int value) {
 		total = total - value;
+		
+		historyList = historyList + " - " + value;
 	}
 	
 	/**
@@ -44,6 +49,8 @@ public class Calculator
 	 */
 	public void multiply (int value) {
 		total = total * value;
+		
+		historyList = historyList + " * " + value;
 	}
 	
 	/**
@@ -53,9 +60,13 @@ public class Calculator
 	public void divide (int value) {
 		if (value == 0) {
 			total = 0;
+			
+			historyList = historyList + " / " + value;
 		}
 		else {
 			total = total / value;
+			
+			historyList = historyList + " / " + value;
 		}
 	}
 	
@@ -64,7 +75,7 @@ public class Calculator
 	 * @return
 	 */
 	public String getHistory () {
-		return "";
+		return historyList;
 	}
 }
 
